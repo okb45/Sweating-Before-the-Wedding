@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #24123d 0%,
+        #3d1f6e 50%,
+        #5e3b9c 100%
+    );
+
+    position: relative;
+}
+
+/* Background glow effects */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+body::before {
+    width: 450px;
+    height: 450px;
+    background: rgba(182, 109, 255, 0.18);
+    top: -150px;
+    left: -150px;
+}
+
+body::after {
+    width: 350px;
+    height: 350px;
+    background: rgba(120, 80, 255, 0.18);
+    bottom: -100px;
+    right: -100px;
+}
+
+/* ===== PAGE CONTAINER ===== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* ===== PROGRESS SECTION ===== */
+
+.progress-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 28px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 999px;
+    overflow: hidden;
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+
+    background: linear-gradient(
+        90deg,
+        #d8b4fe,
+        #c084fc,
+        #a855f7
+    );
+
+    border-radius: inherit;
+
+    transition: width 1s ease;
+}
+
+#countdown-text {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===== TEAM LEADERBOARD ===== */
+
+.leaderboard {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 24px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+.team-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.points {
+    font-size: 4rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.team-card span {
+    display: block;
+
+    margin-top: 10px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+/* ===== WEEKLY CHALLENGE ===== */
+
+.challenge-card {
+    background: rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.20);
+}
+
+.challenge-card h3 {
+    font-size: 1.75rem;
+
+    margin-bottom: 20px;
+}
+
+.challenge-card p {
+    font-size: 1.1rem;
+
+    line-height: 1.6;
+}
+
+.bonus {
+    margin-top: 25px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    color: #e9d5ff;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    .points {
+        font-size: 3rem;
+    }
+
+    .challenge-card {
+        padding: 25px;
+    }
+
+    .challenge-card h3 {
+        font-size: 1.5rem;
+    }
+
+}
