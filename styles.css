@@ -6,19 +6,13 @@
 }
 
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
+    margin: 0;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    overflow-x: hidden;
 
-    background: linear-gradient(
-        135deg,
-        #24123d 0%,
-        #3d1f6e 50%,
-        #5e3b9c 100%
-    );
-
-    position: relative;
+    background: #2a0f4a; /* solid modern deep purple */
 }
 
 /* Background glow effects */
